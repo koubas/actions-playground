@@ -15,6 +15,13 @@ on: ["push","pull_request","workflow_dispatch"]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  cont:
+    runs-on: self-hosted
+    container: debian:bullseye
+    steps:
+      - name: uname
+        run: uname -a
+
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
