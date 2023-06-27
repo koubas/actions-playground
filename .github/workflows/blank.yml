@@ -20,7 +20,9 @@ jobs:
     container: debian:bullseye
     steps:
       - name: uname
-        run: uname -a
+        run: |
+          uname -a
+          sleep 60
 
   # This workflow contains a single job called "build"
   build:
